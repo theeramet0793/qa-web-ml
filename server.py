@@ -15,7 +15,7 @@ CORS(app)
 
 # POST 
 #api.add_resource(TriggerHasNewPost,"/hasnewpost") #support {params:{ a:1, b:2}}
-api.add_resource(Process,"/hasnewpost") #support {params:{ a:1, b:2}}
+#api.add_resource(Process,"/hasnewpost") #support {params:{ a:1, b:2}}
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
