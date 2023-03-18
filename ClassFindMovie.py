@@ -16,8 +16,8 @@ class FindMovie():
       for keyword in keywordList:
           mycursor.execute("\
             SELECT tmdbId\
-            FROM keywordmovie \
-            WHERE keywordmovie.keyword = %s",(keyword))
+            FROM Keywordmovie \
+            WHERE Keywordmovie.keyword = %s",(keyword))
           movieTuple = mycursor.fetchall()
           connection.commit()
           tempMovieList = []

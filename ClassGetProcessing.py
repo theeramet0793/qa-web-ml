@@ -18,6 +18,7 @@ class Process(Resource):
       movieList = (createMovieObjList(movieDict))
       body = {
         "postId":data['postId'],
+        "userId":data['userId'],
         "movielist":movieList
       }
       requests.post(api_url_for_post_movie_list, json=body)
@@ -31,7 +32,7 @@ def createMovieObjList(movieDict):
     mylist = []
     for key, value in movieDict.items():
       mylist.append(createMovieObj(key, value))
-    return mylist[0:3]
+    return mylist #mylist[0:3]
   
 def createMovieObj(tmdbId, freq):
     obj = {
